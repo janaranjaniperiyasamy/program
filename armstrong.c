@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int a,b,a1,l=0,r1=1,c,r,sum=0;
+    clrscr();
+    scanf("%d",&a);
+    b=a;
+    a1=a;
+    while(a)
+    {
+        a=a/10;
+        l++;
+    }
+    c=l;
+    while(b)
+    {
+        r=b%10;
+        b=b/10;
+        while(c)
+        {
+            r1=r1*r;
+            c--;
+        }
+        sum=sum+r1;
+        c=l;
+        r1=1;
+    }
+    if(a1==sum)
+    {
+        printf("yes");
+    }
+    else
+    {
+        printf("no");
+    }
+    getch();
+}
