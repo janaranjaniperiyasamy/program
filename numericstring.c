@@ -3,16 +3,24 @@
 int main()
 {
     char a[100];
-    int i,r=0;
+    int i,r=0,c=0;
     scanf("%[^\n]s",a);
+    for(i=0;a[i]!=NULL;i++)
+    {
+        c++;
+    }
     for(i=0;a[i]!=NULL;i++)
     {
         if((a[i]>='0') && (a[i]<='9'))
         {
-            r=1;
+            r++;
+        }
+        if(a[i]=='.')
+        {
+            r++;
         }
     }
-    if(r==1)
+    if(r==c)
     {
         printf("yes");
         }
