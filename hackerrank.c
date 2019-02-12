@@ -11,28 +11,29 @@ int main()
     n1=n;
     while(n)
     {
-        for(j=0;j<n;j++)
-        {
-          if (t > 0 && j == 0)
-           {
-            printf("%d ", n1);
-          }
+i=0;
+      if (i==0 && t>0) {
+        printf("%d ", n1);
+      }
 
-          for (i = 1; i < n * 2 - 1; i++) {
-            printf("%d ", n);
+      for (i = 1; i <=n * 2-1 ; i++) {
+        printf("%d ", n);
       }
-      t++;
-      if(i==n*2)
-      {
-          printf("%d ",n1);
-      }
-      break;
-        }
-      n--;
+      
+      
+   
+    if (t > 0 && i == n * 2 ) {
+      printf("%d ", n1);
+    }
+    n--;
+    t++;
+    printf("\n");
+     
 }
-for (i = 1; i < n * 2 - 1; i++) {
+for (i = 0; i < n1 * 2 - 1; i++) {
   printf("%d ", n1);
 }
 
 return 0;
 }
+
