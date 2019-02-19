@@ -1,44 +1,46 @@
 #include <stdio.h>
+#include<string.h>
 
 int main()
 {
-    char *str,a[100]={"kabali"};
-    int n,i,c,l,r,s,k;
+    char a[100],b[100]={"kabali"};
+    int i,j,n,c=0,c1,k,r,l;
     scanf("%d",&n);
-    str = (char *)malloc(sizeof(char)*n);
     for(i=0;i<n;i++)
     {
-        scanf("%s",str[i]);
-        c=strlen(a);
-        l=strlen(str);
-        if(c==l)
+        scanf("%s",a);
+        c1=strlen(b);
+        l=strlen(a);
+        if(c1==l)
         {
-        for(j=0;j<c;j++)
+        for(j=0;j<c1;j++)
         {
             for(k=0;k<l;k++)
             {
-                if(a[j]==str[k])
+                if(b[j]==a[k])
                 {
-                    str[k]='*';
+                    a[k]='*';
+                    break;
                 }
             }
         }
         r=0;
         for(j=0;j<l;j++)
         {
-            if(str[j]!='*')
+            if(a[j]!='*')
             {
                 r++;
             }
         }
         if(r==0)
         {
-            s++;
+            c++;
         }
         }
         
     }
-    printf("%d",s);
+    printf("%d",c);
     
+
     return 0;
 }
