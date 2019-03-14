@@ -1,25 +1,26 @@
+
 #include<stdio.h>
 #include<string.h>
 void main()
 {
-    char a[1000],b[1000],c[1000];
+    char a1[1000],b1[1000],c1[1000];
     int i,j,k=0,n=0,l=0,m,s=0;
-    gets(a);
-    scanf("%s",b);
-    m=strlen(b);
-    for(i=0;a[i]!='\0';i++)
+    gets(a1);
+    scanf("%s",b1);
+    m=strlen(b1);
+    for(i=0;a1[i]!='\0';i++)
     {
-        if(a[i]!=' ')
+        if(a1[i]!=' ')
         {
-           c[k]=a[i]; 
+           c1[k]=a1[i]; 
            k++;
         }
-        if(a[i]==' ')
+        if(a1[i]==' ')
         {
             s++;
             for(j=0;j<k;j++)
             {
-                if(c[j]==b[l])
+                if(c1[j]==b1[l])
                 
                     n++;
               
@@ -27,7 +28,7 @@ void main()
             }
             for(j=0;j<k;j++)
             {
-                c[j]='\0';
+                c1[j]='\0';
                 n=0;
                 l=0;
             }
@@ -37,7 +38,7 @@ void main()
     l=0;
         for(j=0;j<k;j++)
             {
-                if(c[j]==b[l])
+                if(c1[j]==b1[l])
                 {
                     n++;
                     l++;
