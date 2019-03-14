@@ -1,0 +1,65 @@
+#include<stdio.h>
+void main()
+{
+int n,m,a[10000],b[10000],c[10000],i,j,k=0,c=0,temp,s=0;
+scanf("%d %d",&n,&m);
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+for(i=0;i<m;i++)
+{
+    scanf("%d",&c[i]);
+}
+for(i=0;i<n;i++)
+{
+c=0;
+if(a[i]!='*')
+{
+for(j=0;j<m;j++)
+{
+    if(c[j]!='*')
+    {
+if(a[i]==c[j])
+{
+c++;
+a[j]='*';
+}
+}
+}
+if(c>0)
+{
+b[k]=a[i];
+k++;
+}
+}
+}
+b[k]=NULL;
+for(i=0;b[i]!=NULL;i++)
+{
+    s++;
+}
+if(s>0)
+{
+for(i=0;b[i]!=NULL;i++)
+{
+for(j=i+1;b[j]!=NULL;j++)
+{
+    if(b[i]>b[j])
+    {
+        temp=b[j];
+        b[j]=b[i];
+        b[i]=temp;
+    }
+}
+}
+for(i=0;b[i]!=NULL;i++)
+{
+    printf("%d ",b[i]);
+}
+}
+else
+{
+    printf("unique");
+}
+}
