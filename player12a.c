@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-int n,m,a[10000],b[10000],c[10000],i,j,k=0,c=0,temp,s=0;
+int n,m,a[10000],b[10000],c[10000],i,j,k=0,c1=0,temp;
 scanf("%d %d",&n,&m);
 for(i=0;i<n;i++)
 {
@@ -13,34 +13,25 @@ for(i=0;i<m;i++)
 }
 for(i=0;i<n;i++)
 {
-c=0;
-if(a[i]!='*')
-{
+c1=0;
 for(j=0;j<m;j++)
 {
     if(c[j]!='*')
     {
 if(a[i]==c[j])
 {
-c++;
-a[j]='*';
+c1++;
+c[j]='*';
 }
 }
 }
-if(c>0)
+if(c1>0)
 {
 b[k]=a[i];
 k++;
 }
 }
-}
 b[k]=NULL;
-for(i=0;b[i]!=NULL;i++)
-{
-    s++;
-}
-if(s>0)
-{
 for(i=0;b[i]!=NULL;i++)
 {
 for(j=i+1;b[j]!=NULL;j++)
@@ -56,10 +47,5 @@ for(j=i+1;b[j]!=NULL;j++)
 for(i=0;b[i]!=NULL;i++)
 {
     printf("%d ",b[i]);
-}
-}
-else
-{
-    printf("unique");
 }
 }
